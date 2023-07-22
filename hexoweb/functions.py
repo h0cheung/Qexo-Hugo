@@ -89,7 +89,7 @@ def get_cdnjs():
 
 # 获取用户自定义的样式配置
 def get_custom_config():
-    context = {"cdn_prev": get_cdn(), "cdnjs": get_cdnjs(), "QEXO_NAME": get_setting("QEXO_NAME")}
+    context = {"cdn_prev": get_cdn(), "cdnjs": get_cdnjs(), "QEXO_NAME": get_setting("QEXO_NAME"), "timezone": get_setting("TIME_ZONE")}
     if not context["QEXO_NAME"]:
         save_setting('QEXO_NAME', 'Hexo管理面板')
         context["QEXO_NAME"] = get_setting("QEXO_NAME")
